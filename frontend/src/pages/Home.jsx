@@ -64,7 +64,8 @@ export default function Home() {
 
               {p.images?.length > 0 && (
                 <img
-                  src={`http://localhost:2000/api/products/image/${p.images[0]}`}
+                  // src={`http://localhost:2000/api/products/image/${p.images[0]}`}
+                  src={`${import.meta.env.VITE_API_URL}/products/image/${p.images[0]}`}
                   className="card-img-top"
                   alt={p.name}
                   style={{ height: "200px", objectFit: "cover" }}
