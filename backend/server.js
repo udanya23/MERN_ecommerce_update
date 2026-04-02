@@ -15,8 +15,8 @@ require("dotenv").config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors({
-    origin: "https://mern-ecommerce-frontend-04p7.onrender.com",
-    // origin:"http://localhost:5173",
+    // origin: "https://mern-ecommerce-frontend-04p7.onrender.com",
+    origin:"http://localhost:5173",
     credentials: true
 }))
 connectDB(app)
