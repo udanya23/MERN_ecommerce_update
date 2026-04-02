@@ -54,8 +54,8 @@ const SellerDashboard = () => {
 
                                         <img
                                             key={index}
-                                            src={`http://localhost:2000/api/product/image/${imgId}`}
-                                            // src={`${import.meta.env.VITE_API_URL}/product/image/${imgId}`}
+                                            // src={`http://localhost:5000/api/product/image/${imgId}`}
+                                            src={`${import.meta.env.VITE_API_URL}/product/image/${imgId}`}
                                             width="80"
                                             height="80"
                                             className="me-2 mb-2"

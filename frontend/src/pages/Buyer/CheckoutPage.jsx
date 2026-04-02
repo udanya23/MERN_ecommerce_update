@@ -75,41 +75,18 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="card shadow-lg p-5 bg-glass text-center">
-            <h2 className="mb-4 section-title">Checkout</h2>
-            <p className="text-muted mb-4">Please provide your shipping address to proceed with the payment.</p>
-            <div className="mb-4">
-              <textarea
-                className="form-control"
-                rows="4"
-                placeholder="Enter shipping address"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-                required
-              />
-            </div>
-            
-            <button 
-              className="btn btn-success btn-lg w-100 shadow-sm" 
-              onClick={handleCheckout} 
-              disabled={loading || !address.trim()}
-            >
-              {loading ? (
-                <>
-                  <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                  Redirecting to Stripe...
-                </>
-              ) : "Pay Now & Confirm Order"}
-            </button>
-            <p className="mt-3 small text-muted">
-              Secure payment via Stripe.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div>
+      <h2>Checkout</h2>
+      <textarea
+        placeholder="Enter shipping address"
+        value={address}
+      onChange={(e) => setAddress(e.target.value)}
+    />
+    <br />
+
+    <button onClick={handleCheckout} disabled={loading}>
+      {loading ? "Redirecting..." : "Pay Now"}
+    </button>
+  </div>
 )
 }
